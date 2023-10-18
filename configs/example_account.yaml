@@ -1,0 +1,44 @@
+
+sep: ","
+
+expense_sign: -1
+
+cols:
+    date: "Transaction Date" 
+    description: "Description"
+    original_category: "Category"
+    amount: "Amount"
+
+# Categories are treated mutually exclusively. 
+# The order of these entries matters -- an expense
+# will be put into the first category it matches. 
+categories:
+    lunch:
+        description: ["CAVA", "CHIPOTLE", "Subway"]
+    groceries:
+        original_category: ["Groceries"]
+        description: ["COSTCO", "STAR MARKET"]
+    coffee:
+        description: ["NERO", "TATTE", "Pavement Coffeehouse", "WONDERSTATE"]
+    eating_out:
+        original_category: ["Food & Drink"]
+    bicycle:
+        description: ["BICYC"]
+    moving:
+        description: ["U-HAUL", "AIRBNB", "HOSTEL"]
+    Target:
+        description: ["TARGET"]
+    Amazon:
+        description: ["AMZN", "Amazon"]
+    Walmart:
+        description: ["WALMART"]
+    subscriptions:
+        description: ["SPOTIFY", "OVERLEAF"]
+    travel:
+        description: ["UBER", "DELTA", "UNITED"]
+    clothing:
+        description: ["Ralph Lauren", "REI", "LEVIS", "Icebreaker"]
+    payment:
+        description: ["PAYMENT", "Payment"]
+
+ 

@@ -89,7 +89,7 @@ if __name__=="__main__":
     parser.add_argument("expenditure_tsv")
     parser.add_argument("out_categorized_tsv")
     parser.add_argument("out_html")
-    parser.add_argument("--data_config", help="YAML config file specifying how to parse the TSV", default="configs/chase.yaml")
+    parser.add_argument("--data_config", help="YAML config file specifying how to parse the TSV", default="configs/example_account.yaml")
     parser.add_argument("--session_config", help="YAML config file specifying how to display the data", default="configs/session.yaml")
     args = parser.parse_args()
     
