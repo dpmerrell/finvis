@@ -1,8 +1,10 @@
 
-sep: ","
+name: "credit_card"
 
-expense_sign: -1
-
+# These parameters govern how a raw CSV file
+# from e.g. a bank account will be ingested.
+read_csv_opts:
+    sep: ","
 cols:
     date: "Transaction Date" 
     description: "Description"
@@ -14,31 +16,36 @@ cols:
 # will be put into the first category it matches. 
 categories:
     lunch:
-        description: ["CAVA", "CHIPOTLE", "Subway"]
+        description: ["CAVA", "CHIPOTLE"]
     groceries:
         original_category: ["Groceries"]
-        description: ["COSTCO", "STAR MARKET"]
+        description: ["STAR MARKET", "COSTCO"]
     coffee:
-        description: ["NERO", "TATTE", "Pavement Coffeehouse", "WONDERSTATE"]
+        description: ["NERO", "TATTE", "COLECTIVO"]
     eating_out:
         original_category: ["Food & Drink"]
     bicycle:
         description: ["BICYC"]
     moving:
-        description: ["U-HAUL", "AIRBNB", "HOSTEL"]
+        description: ["U-HAUL", "AIRBNB", "CITY OF BOSTON"]
     Target:
         description: ["TARGET"]
     Amazon:
         description: ["AMZN", "Amazon"]
-    Walmart:
-        description: ["WALMART"]
-    subscriptions:
-        description: ["SPOTIFY", "OVERLEAF"]
     travel:
         description: ["UBER", "DELTA", "UNITED"]
     clothing:
-        description: ["Ralph Lauren", "REI", "LEVIS", "Icebreaker"]
-    payment:
+        description: ["REI", "LEVIS", "Icebreaker"]
+    credit_card_payment:
         description: ["PAYMENT", "Payment"]
+
+
+##############################################################
+# This parameter allows us to detect transactions between 
+# this account and another held account (i.e., a transfer); 
+
+transactors:
+    checking_account:
+        original_category: ["PAYMENT", "Payment"]
 
  
